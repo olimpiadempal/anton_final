@@ -22,7 +22,7 @@ body{
 
 h2 a{
     
-    font-family: 'Papyrus', fantasy;
+    font-family: 'Bradley Hand', cursive;
     font-size: 30pt;
     color: #516e9e;
 }
@@ -49,8 +49,13 @@ h2 a{
     color: #630923;
 }
 
+.edit {
+    color: #630923;
+}
+
 .save {
     float: right;
+    margin-bottom: 20px;
 }
 
 .post-form textarea, .post-form input {
