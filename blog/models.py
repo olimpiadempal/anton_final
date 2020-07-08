@@ -12,17 +12,17 @@ class Post(models.Model):
    
     image = models.ImageField(null=True, upload_to='images/') 
 
-    CATEGORY1 = 'Essen'
-    CATEGORY2 = 'Körper'
+    CATEGORY1 = 'Food'
+    CATEGORY2 = 'Body'
     CATEGORY3 = 'Lifestyle'
     CATEGORY4 = 'Sport'
-    CATEGORY5 = 'Anders'
+    CATEGORY5 = 'Other'
     CATEGORY_CHOICES = [
-        (CATEGORY1, 'Essen'),
-        (CATEGORY2, 'Körper'),
+        (CATEGORY1, 'Food'),
+        (CATEGORY2, 'Body'),
         (CATEGORY3, 'Lifestyle'),
         (CATEGORY4, 'Sport'),
-        (CATEGORY5, 'Anders')
+        (CATEGORY5, 'Other')
     ]
     category = models.CharField(
         blank=True,

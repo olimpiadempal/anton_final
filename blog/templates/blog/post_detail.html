@@ -4,26 +4,26 @@
     <div class="post">
         {% if post.published_date %}
         <div class="date">
-            <a>Erstelldatum:  </a>{{ post.published_date }}
+            <a>Publish Date:  </a>{{ post.published_date }}
         </div>
         {% endif %}
         {% if post.author %}
         <div class="author">
-            <a>Autor:  </a>{{ post.author }}
+            <a>Author:  </a>{{ post.author }}
         </div>
         {% endif %}
         
 
        
         <div class="category">
-            <a>Kategorie:  </a>{{ post.category }}
+            <a>Category:  </a>{{ post.category }}
 
         </div>
 
 
        <div class="edit">
             {% if user.is_authenticated %}
-            <a>Bearbeite den Blogbeitrag:</a>
+            <a>Edit the post:</a>
         
             <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         {% endif %}
