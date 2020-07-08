@@ -7,29 +7,28 @@
             <a>Publish Date:  </a>{{ post.published_date }}
         </div>
         {% endif %}
+        
         {% if post.author %}
         <div class="author">
             <a>Author:  </a>{{ post.author }}
         </div>
         {% endif %}
-        
 
-       
         <div class="category">
             <a>Category:  </a>{{ post.category }}
-
         </div>
 
-
-       <div class="edit">
-            {% if user.is_authenticated %}
+        {% if user.is_authenticated %}
+        <div class="edit">
             <a>Edit the post:</a>
-        
             <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        </div>
         {% endif %}
-    </div>
+
         <h2><a>{{ post.title }}</a></h2>
+
         <p>{{ post.text|linebreaksbr }}</p>
+        
         {% if post.image %}
         <img src="{{ post.image.url}}" alt="{{ post.title }}" class="post-image">
         {% endif %}

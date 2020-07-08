@@ -14,13 +14,8 @@
             <h1><a href="/">Antons Blog</a></h1>
         </div>
 
-
-
-
             <div class="row">
                 <div class="col-md-8">
-
-
                 {% block content %}
                 {% for post in posts %}
                         <div class="post">
@@ -29,31 +24,25 @@
                                 <a>Publish Date:  </a>{{ post.published_date }}
                             </div>
                             {% endif %}
+                            
                             {% if post.author %}
                             <div class="author">
                                 <a>Author:  </a>{{ post.author }}
                             </div>
                             {% endif %}
-                            
-                    
-                           
+                       
                             <div class="category">
                                 <a>Category:  </a>{{ post.category }}
-                    
                             </div>
-                    
 
                             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
 
-
-
                             <p>{{ post.text|linebreaksbr }}</p>
+
                             {% if post.image %}
                             <img class="img-responsive"src="{{ post.image.url}}" alt="{{ post.title }}" class="post-image">
                             {% endif %}
                      
-                           
-  
                         </div>
                     {% endfor %}
                 {% endblock %}
