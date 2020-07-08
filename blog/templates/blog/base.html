@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Antons Blog</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -11,6 +13,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <style type='text/css'> img{display: block;margin-bottom: 30px;}</style>
     </head>
     
 
@@ -21,7 +24,7 @@
         <div class="page-header">
 
             <h1><a href="/">Antons Blog</a></h1>
-
+            <img class="img-responsive" src="{% static 'images/anton.PNG' %}"  alt="Lights" style="width:100%"/>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #516e9e;">
 
@@ -54,13 +57,12 @@
 
         </nav>
         </div>
-      <div class="image"><img src="{% static 'images/anton.PNG' %}" width="600px" height="300px"/></div>
         
 
       
       <br/>
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-xs-12">
                     {% block content %}
                     {% endblock %}
                 </div>
