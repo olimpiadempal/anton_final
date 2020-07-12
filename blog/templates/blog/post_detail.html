@@ -1,6 +1,11 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+<div class="row">
+    <div class="col-lg-6">
+
+
+
     <div class="post">
         {% if post.published_date %}
         <div class="date">
@@ -28,9 +33,16 @@
         <h2><a>{{ post.title }}</a></h2>
 
         <p>{{ post.text|linebreaksbr }}</p>
+
+    </div>
+</div>
+
+    <div class="col-lg-6">
         
         {% if post.image %}
-        <img src="{{ post.image.url}}" alt="{{ post.title }}" class="post-image">
+        <img class="img-responsive" src="{{ post.image.url}}" alt="{{ post.title }}" class="post-image">
         {% endif %}
+
+    </div>
     </div>
 {% endblock %}
